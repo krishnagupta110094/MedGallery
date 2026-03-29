@@ -18,6 +18,7 @@ const auth = (requiredRole) => {
 
       // 👤 user attach kar
       req.user = decoded;
+      req.token = token;
 
       // 🎯 role check (agar requiredRole diya hai)
       if (requiredRole && requiredRole.includes(req.user.role) === false) {

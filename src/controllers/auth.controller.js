@@ -73,6 +73,7 @@ const login = async (req, res) => {
         username: user.username,
         email: user.email,
         role: user.role,
+        token: token,
       },
     });
   } catch (err) {
@@ -91,6 +92,7 @@ const getMe = async (req, res) => {
         username: user.username,
         email: user.email,
         role: user.role,
+        token: req.token,
       },
     });
   } catch (err) {
