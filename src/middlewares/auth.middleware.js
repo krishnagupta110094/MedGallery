@@ -5,7 +5,7 @@ const auth = (requiredRole) => {
     try {
       // 🍪 cookie se token lena
       const token =
-        req.cookies.token || req.headers.authorization.split(" ")[1];
+        req.headers.authorization && req.headers.authorization.split(" ")[1];
 
       if (!token) {
         return res.status(401).json({
