@@ -60,7 +60,7 @@ const login = async (req, res) => {
     // 🍪 Save token in cookie
     res.cookie("token", token, {
       httpOnly: true, // JS access nahi kar sakta (secure)
-      secure: false, // true in production (https)
+      secure: true, // true in production (https)
       sameSite: "strict", // CSRF protection
       maxAge: 24 * 60 * 60 * 1000, // 1 day
     });
