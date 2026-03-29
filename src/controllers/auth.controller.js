@@ -61,7 +61,7 @@ const login = async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true, // JS access nahi kar sakta (secure)
       secure: true, // true in production (https)
-      sameSite: "strict", // CSRF protection
+      sameSite: "None", // CSRF protection
       maxAge: 24 * 60 * 60 * 1000, // 1 day
     });
 
